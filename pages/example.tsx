@@ -1,3 +1,9 @@
+import Link from "next/link";
+
 export default function Example() {
-  return <div>example</div>;
+  return (
+    <div>
+      <Link href="/products">products</Link>
+    </div>
+  );
 }
