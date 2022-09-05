@@ -1,3 +1,4 @@
+// 複数使用される型をここで定義
 import { Book, Author, User } from "@prisma/client";
 type Book = Book;
 
