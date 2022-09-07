@@ -6,6 +6,7 @@ type ChildrenProps = {
   text: string;
 };
 
+// 下のコメントはeslintをその部分だけ無効にするという意味。これによりプログラムに影響ないeslintのエラーを防げる
 // eslint-disable-next-line react/display-name
 const Memo = memo((props: ChildrenProps) => {
   //memoにより親コンポーネントが採苗がされてもpropsの値が変更されない限り際描画されない
