@@ -39,7 +39,6 @@ export const getStaticPaths: GetStaticPaths<PathParams> = async () => {
 export const getStaticProps: GetStaticProps<PageProps> = async (context) => {
   // ファイル名が [id].tsx なので id パラメーターを取り出すことができる
   const { id } = context.params as PathParams;
-
   // 本来はここで getBook(id) のように API を呼び出してデータを取得する
   const props: PageProps = {
     title: `Title-${id}`,
