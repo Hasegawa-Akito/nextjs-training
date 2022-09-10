@@ -1,14 +1,23 @@
 import { NextPage } from "next";
-import StartLink from "../src/components/atoms/link/StartLink";
+import { useEffect, useState } from "react";
+import GameSelect from "../src/components/modules/select/start/GameSelect";
+import StartTypeSelect from "../src/components/modules/select/start/StartTypeSelect";
 
 const Start: NextPage = () => {
+  const [gameType, setGameType] = useState<string | null>(null);
+
+  useEffect(() => {
+    console.log(gameType);
+  }, [gameType]);
+
   return (
-    <section className="h-screen bg-cover bg-gray-900">
+    <section className="h-screen bg-cover bg-white">
       <div className="flex h-full w-full items-center justify-center container mx-auto px-8">
-        <div className="max-w-2xl text-center">
-          <StartLink gameType="poker" />
-          <StartLink gameType="mahjong" />
-        </div>
+        {gameType ? (
+          <StartTypeSelect gameType={gameType} />
+        ) : (
+          <GameSelect setGameType={setGameType} />
+        )}
       </div>
     </section>
   );

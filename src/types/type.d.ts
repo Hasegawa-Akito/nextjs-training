@@ -8,3 +8,7 @@ type User = User;
 
 // BookにAouthorを付随させた時の型
 type BookWithAuthor = Book & { author: Author };
+
+type GameProps = {
+  gameType: string;
+};

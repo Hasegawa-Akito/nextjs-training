@@ -1,6 +1,6 @@
 // pages/api/books/index.ts
 import type { NextApiRequest, NextApiResponse } from "next";
-import type { Book } from "../../../src/type";
+import type { Book } from "../../../src/types/type";
 import { prismaBookFindMany } from "../../../prisma/apis/books";
 
 export default async function handler(

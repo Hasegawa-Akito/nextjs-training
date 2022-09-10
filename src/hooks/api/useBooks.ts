@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { BookWithAuthor } from "../../type";
+import { BookWithAuthor } from "../../types/type";
 
 // useQueryを複数場所で使える様独自のhooksを作成
 export const useBooks = (): { data: BookWithAuthor[]; isLoading: boolean } => {

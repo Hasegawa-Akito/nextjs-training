@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import type { BookWithAuthor } from "../../../src/type";
+import type { BookWithAuthor } from "../../../src/types/type";
 import { prismaBookFindMany } from "../../../prisma/apis/books";
 
 export default async function handler(
