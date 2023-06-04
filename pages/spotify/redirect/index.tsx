@@ -24,6 +24,13 @@ const Redirect: NextPage = () => {
           params: { code: code as string },
         });
         console.log(response);
+        const access_token: string = response.data.access_token;
+
+        if (!access_token) return;
+        router.push({
+          pathname: "/spotify",
+          query: { access_token: access_token },
+        });
       } catch (e) {
         console.log(e);
       }

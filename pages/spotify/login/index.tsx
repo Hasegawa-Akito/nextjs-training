@@ -1,9 +1,9 @@
 import { NextPage } from "next";
-
 const authorizeUrl = "https://accounts.spotify.com/authorize";
 const redirectUri = "http://localhost:3000/spotify/redirect";
 const clientId = process.env.NEXT_PUBLIC_CLIENT_ID ?? "";
-const scope = "user-read-private user-read-email";
+const scope =
+  "user-read-private user-read-email playlist-read-private playlist-read-collaborative user-modify-playback-state";
 
 const generateRandomString = (length: number) => {
   const characters =
