@@ -1,3 +1,4 @@
+import { CalendarUI } from "@/components/shadcn/CalendarUI";
 import { Button } from "@/components/ui/button";
 import type { NextPage } from "next";
 
@@ -7,6 +8,7 @@ const Home: NextPage = () => {
   };
   return (
     <div>
+      <CalendarUI />
       <div>
         <Button onClick={handleButton}>登録</Button>
       </div>
