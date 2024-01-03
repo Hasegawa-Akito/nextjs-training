@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Calendar } from "../ui/calendar";
+import { PopoverCalendar } from "./PopoverCalendar";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -67,11 +68,13 @@ export function FormUI() {
             <FormItem>
               <FormLabel>登録日</FormLabel>
               <FormControl>
-                <Calendar
-                  selected={field.value}
-                  onSelect={field.onChange}
-                  mode="single"
-                />
+                <div>
+                  <PopoverCalendar
+                    selected={field.value}
+                    onSelect={field.onChange}
+                    mode="single"
+                  />
+                </div>
               </FormControl>
               <FormMessage />
             </FormItem>
