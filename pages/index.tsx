@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <Button
         onClick={() => {
           toast({
-            variant: "destructive",
+            variant: "success",
             title: "Uh oh! Something went wrong.",
             description: "There was a problem with your request.",
           });
