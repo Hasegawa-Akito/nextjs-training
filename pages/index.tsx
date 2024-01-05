@@ -1,17 +1,27 @@
 import { FormUI } from "@/components/shadcn/FormUI";
 import { Button } from "@/components/ui/button";
+import { ToastProvider, ToastViewport } from "@/components/ui/toast";
+import { Toaster } from "@/components/ui/toaster";
+import { useToast } from "@/components/ui/use-toast";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  const handleButton = () => {
-    console.log("click");
-  };
+  const { toast } = useToast();
   return (
     <div>
-      <div>
-        <Button onClick={handleButton}>登録</Button>
-      </div>
+      <Button
+        onClick={() => {
+          toast({
+            variant: "destructive",
+            title: "Uh oh! Something went wrong.",
+            description: "There was a problem with your request.",
+          });
+        }}
+      >
+        toast
+      </Button>
       <FormUI />
+      <Toaster />
     </div>
   );
 };
